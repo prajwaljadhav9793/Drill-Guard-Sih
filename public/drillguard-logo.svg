@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="dg-shield-outer" x1="20" y1="20" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0C2D66" />
+      <stop offset="50%" stop-color="#06193B" />
+      <stop offset="100%" stop-color="#030C20" />
+    </linearGradient>
+    <linearGradient id="dg-shield-rim" x1="30" y1="25" x2="205" y2="215" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38E4FF" />
+      <stop offset="45%" stop-color="#0088FF" />
+      <stop offset="100%" stop-color="#003799" />
+    </linearGradient>
+    <linearGradient id="dg-radar-bg" x1="115" y1="35" x2="205" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0095FF" />
+      <stop offset="55%" stop-color="#0047B3" />
+      <stop offset="100%" stop-color="#021B4A" />
+    </linearGradient>
+    <linearGradient id="dg-swoosh" x1="15" y1="70" x2="195" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#47E8FF" />
+      <stop offset="45%" stop-color="#0088FF" />
+      <stop offset="100%" stop-color="#04245C" />
+    </linearGradient>
+    <linearGradient id="dg-well-glow" x1="125" y1="115" x2="125" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <clipPath id="dg-inner-clip">
+      <path d="M120 32 C158 32 194 46 202 52 C202 124 182 176 120 212 C58 176 38 124 38 52 C46 46 82 32 120 32 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Shield Base -->
+  <path d="M120 22 C164 22 204 38 212 45 C212 126 189 184 120 224 C51 184 28 126 28 45 C36 38 76 22 120 22 Z" fill="url(#dg-shield-outer)" stroke="#38BDF8" stroke-width="2.5" />
+  <path d="M120 28 C160 28 197 42 205 49 C205 125 184 179 120 216 C56 179 35 125 35 49 C43 42 80 28 120 28 Z" fill="none" stroke="url(#dg-shield-rim)" stroke-width="5" />
+
+  <!-- Clipped Inner Shield Scene -->
+  <g clip-path="url(#dg-inner-clip)">
+    <!-- Left Sky Backdrop -->
+    <rect x="30" y="25" width="92" height="105" fill="#E8F6FF" />
+    <path d="M38 48 L95 36 L95 125 L38 125 Z" fill="#0095FF" opacity="0.22" />
+
+    <!-- Right GIS Radar & Map Half -->
+    <rect x="115" y="25" width="98" height="115" fill="url(#dg-radar-bg)" />
+
+    <!-- Subtle GIS Grid Lines -->
+    <g stroke="#38E4FF" stroke-opacity="0.22" stroke-width="1">
+      <line x1="130" y1="30" x2="130" y2="135" />
+      <line x1="150" y1="30" x2="150" y2="135" />
+      <line x1="170" y1="30" x2="170" y2="135" />
+      <line x1="190" y1="30" x2="190" y2="135" />
+      <line x1="115" y1="55" x2="210" y2="55" />
+      <line x1="115" y1="75" x2="210" y2="75" />
+      <line x1="115" y1="95" x2="210" y2="95" />
+      <line x1="115" y1="115" x2="210" y2="115" />
+    </g>
+
+    <!-- Radar Concentric Dashed Circles -->
+    <circle cx="156" cy="92" r="34" fill="none" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.4" stroke-dasharray="4 3" />
+    <circle cx="156" cy="92" r="21" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.3" stroke-dasharray="3 2.5" />
+    <circle cx="156" cy="92" r="10" fill="#00E1FF" fill-opacity="0.28" />
+
+    <!-- Primary Center Pin -->
+    <path d="M156 72 C149.5 72 144.5 77 144.5 83.5 C144.5 92 156 103 156 103 C156 103 167.5 92 167.5 83.5 C167.5 77 162.5 72 156 72 Z" fill="#FFFFFF" />
+    <circle cx="156" cy="83" r="4.5" fill="#0088FF" />
+
+    <!-- Offset Well Pins on Radar -->
+    <g fill="#FFFFFF">
+      <circle cx="163" cy="54" r="4.5" />
+      <path d="M159 55 L163 62 L167 55 Z" />
+      <circle cx="131" cy="82" r="4" />
+      <path d="M128 83 L131 89 L134 83 Z" />
+      <circle cx="182" cy="79" r="4" />
+      <path d="M179 80 L182 86 L185 80 Z" />
+      <circle cx="184" cy="112" r="4" />
+      <path d="M181 113 L184 119 L187 113 Z" />
+    </g>
+
+    <!-- Subsurface Geological Strata Layers (Bottom Half) -->
+    <path d="M35 122 Q78 116 120 126 T205 120 L205 220 L35 220 Z" fill="#F59E0B" />
+    <path d="M35 136 Q78 126 120 140 T205 134 L205 220 L35 220 Z" fill="#B45309" />
+    <path d="M35 152 Q78 140 120 156 T205 148 L205 220 L35 220 Z" fill="#78350F" />
+    <path d="M35 170 Q78 158 120 174 T205 166 L205 220 L35 220 Z" fill="#3B1506" />
+
+    <!-- Rig Base Platform Silhouette -->
+    <path d="M42 114 L138 114 L138 125 L42 125 Z" fill="#041530" />
+    <rect x="58" y="103" width="24" height="12" fill="#062047" />
+    <rect x="118" y="96" width="16" height="22" rx="2" fill="#062047" stroke="#38BDF8" stroke-width="1.2" />
+
+    <!-- Glowing Subsurface Wellbore Column -->
+    <rect x="119" y="116" width="12" height="98" fill="#F97316" fill-opacity="0.45" />
+    <rect x="121.5" y="116" width="7" height="98" fill="url(#dg-well-glow)" />
+    <line x1="125" y1="116" x2="125" y2="214" stroke="#FFFFFF" stroke-width="2" />
+  </g>
+
+  <!-- Towering Drilling Derrick (Rises Above Top of Shield) -->
+  <g stroke="#041530" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Crown Peak -->
+    <path d="M101 6 L107 6 L108 19 L100 19 Z" fill="#0B3B8C" stroke="#041530" stroke-width="2" />
+    <rect x="95" y="19" width="18" height="6" rx="1.5" fill="#041530" stroke="#38E4FF" stroke-width="1.2" />
+    <!-- Main Derrick Legs -->
+    <path d="M98 25 L84 114 L90 114 L101 25 Z" fill="#041530" />
+    <path d="M110 25 L124 114 L118 114 L107 25 Z" fill="#041530" />
+    <!-- Center Drill String -->
+    <line x1="104" y1="25" x2="104" y2="114" stroke="#041530" stroke-width="3.5" />
+    <!-- Cross Bracing -->
+    <line x1="96" y1="38" x2="112" y2="38" stroke-width="3" />
+    <line x1="93" y1="56" x2="115" y2="56" stroke-width="3.5" />
+    <line x1="90" y1="76" x2="118" y2="76" stroke-width="3.5" />
+    <line x1="87" y1="96" x2="121" y2="96" stroke-width="3.5" />
+    <line x1="96" y1="38" x2="115" y2="56" stroke-width="2.2" />
+    <line x1="112" y1="38" x2="93" y2="56" stroke-width="2.2" />
+    <line x1="93" y1="56" x2="118" y2="76" stroke-width="2.4" />
+    <line x1="115" y1="56" x2="90" y2="76" stroke-width="2.4" />
+    <line x1="90" y1="76" x2="121" y2="96" stroke-width="2.5" />
+    <line x1="118" y1="76" x2="87" y2="96" stroke-width="2.5" />
+    <line x1="87" y1="96" x2="120" y2="114" stroke-width="2.5" />
+    <line x1="121" y1="96" x2="88" y2="114" stroke-width="2.5" />
+  </g>
+
+  <!-- Sweeping Dynamic Blue Orbital Swoosh -->
+  <path d="M78 68 C22 98 12 152 54 176 C30 150 38 110 80 82 Z" fill="url(#dg-swoosh)" />
+  <path d="M40 120 C52 178 112 214 166 218 C196 196 212 156 214 105 C206 148 184 184 148 206 C104 196 64 164 40 120 Z" fill="url(#dg-shield-rim)" opacity="0.92" />
+</svg>

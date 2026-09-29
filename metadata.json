@@ -1,0 +1,6 @@
+{
+  "name": "eRTMAC-NWIS | Nearby Wells Intelligence System",
+  "description": "AI-Powered Offset Well Knowledge & Decision Support Platform for Oil India Limited (SIH Problem Statement 26121).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

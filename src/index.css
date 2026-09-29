@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary-olive: #A3E6B8;
+    --color-sage: #9BB0A3;
+    --color-soft-lime: #D4DE95;
+    --color-deep-olive: #0E1914;
+
+    --bg-main: #0E1914;
+    --bg-secondary: #0E1914;
+    --bg-sidebar: #0B1410;
+    --bg-card: #12221B;
+    --bg-elevated: #162920;
+
+    --text-primary: #F2F6F0;
+    --text-secondary: #9BB0A3;
+    --border-subtle: #2B4337;
+
+    --status-success: #4ADE80;
+    --status-warning: #FBBF24;
+    --status-critical: #F87171;
+  }
+
+  html.light-theme {
+    --color-primary-olive: #0D946B;
+    --color-sage: #476355;
+    --color-soft-lime: #5B6E14;
+    --color-deep-olive: #F3F7F4;
+
+    --bg-main: #F3F7F4;
+    --bg-secondary: #EDF3EF;
+    --bg-sidebar: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #EDF3EF;
+
+    --text-primary: #0F231B;
+    --text-secondary: #476355;
+    --border-subtle: #CFE0D6;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    color-scheme: dark;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.light-theme body {
+    background-color: #F3F7F4;
+    color: #0F231B;
+    color-scheme: light;
+  }
+
+  select option {
+    background-color: #12221B;
+    color: #F2F6F0;
+  }
+
+  html.light-theme select option {
+    background-color: #FFFFFF;
+    color: #0F231B;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ============================================================================
+   ARCHITECTURAL LIGHT MODE OVERRIDES (html.light-theme)
+   ============================================================================ */
+
+/* 1. Main Backgrounds & Canvases */
+html.light-theme .bg-\[\#080D0B\],
+html.light-theme .bg-\[\#0E1914\] {
+  background-color: #F3F7F4 !important;
+}
+
+/* 2. Navigation, Sidebar, Modals & Structural Chrome */
+html.light-theme .bg-\[\#0B1410\],
+html.light-theme .bg-\[\#0B1410\]\/90,
+html.light-theme .bg-\[\#0B1410\]\/95,
+html.light-theme .bg-\[\#0B1410\]\/98,
+html.light-theme .bg-\[\#09120E\],
+html.light-theme .bg-\[\#09120E\]\/90,
+html.light-theme .bg-\[\#0E1713\] {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* 3. Primary Cards & Surface Containers */
+html.light-theme .bg-\[\#12221B\],
+html.light-theme .bg-\[\#111A16\],
+html.light-theme .bg-\[\#111A16\]\/90,
+html.light-theme .bg-\[\#111A16\]\/95 {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 1px 3px rgba(15, 35, 27, 0.05);
+}
+
+/* 4. Elevated Inner Surfaces, Form Inputs & Pill Containers */
+html.light-theme .bg-\[\#162920\],
+html.light-theme .bg-\[\#111E18\],
+html.light-theme .bg-\[\#192821\],
+html.light-theme .bg-\[\#0A130F\] {
+  background-color: #EAF2ED !important;
+}
+
+html.light-theme .hover\:bg-\[\#162920\]:hover,
+html.light-theme .hover\:bg-\[\#192821\]:hover,
+html.light-theme .hover\:bg-\[\#1E352B\]:hover,
+html.light-theme .hover\:bg-\[\#22352C\]:hover {
+  background-color: #DCE9E1 !important;
+}
+
+/* 5. Borders & Hairline Dividers */
+html.light-theme .border-\[\#22352C\],
+html.light-theme .border-\[\#22352C\]\/70,
+html.light-theme .border-\[\#22352C\]\/80,
+html.light-theme .border-\[\#2B4337\],
+html.light-theme .border-\[\#233B30\],
+html.light-theme .border-\[\#1D2E26\] {
+  border-color: #CFE0D6 !important;
+}
+
+html.light-theme .border-\[\#3B5949\],
+html.light-theme .hover\:border-\[\#3B5949\]:hover {
+  border-color: #9FB9AA !important;
+}
+
+html.light-theme .divide-\[\#22352C\] > :not(:last-child),
+html.light-theme .divide-\[\#2B4337\] > :not(:last-child) {
+  border-color: #CFE0D6 !important;
+}
+
+/* 6. Primary, Secondary & Muted Typography */
+html.light-theme .text-\[\#F2F6F0\],
+html.light-theme .text-white,
+html.light-theme .hover\:text-\[\#F2F6F0\]:hover,
+html.light-theme .hover\:text-white:hover {
+  color: #0F231B !important;
+}
+
+html.light-theme .text-\[\#C5D6CC\],
+html.light-theme .text-\[\#D0DFD7\],
+html.light-theme .text-\[\#B4C6BC\] {
+  color: #264236 !important;
+}
+
+html.light-theme .text-\[\#9BB0A3\],
+html.light-theme .text-\[\#9BB5A8\],
+html.light-theme .text-\[\#8FA89B\],
+html.light-theme .text-\[\#7E998B\] {
+  color: #4A6658 !important;
+}
+
+html.light-theme .text-\[\#6E887B\],
+html.light-theme .placeholder-\[\#6E887B\]::placeholder {
+  color: #6B8578 !important;
+}
+
+/* 7. High-Contrast Emerald, Mint & Olive Accents on Light Surfaces */
+html.light-theme .text-\[\#26E8B0\],
+html.light-theme .text-\[\#A3E6B8\],
+html.light-theme .hover\:text-\[\#26E8B0\]:hover {
+  color: #097956 !important;
+}
+
+html.light-theme .text-\[\#D4DE95\] {
+  color: #556910 !important;
+}
+
+/* Preserve dark text inside solid bright CTA buttons in Light Mode */
+html.light-theme .bg-\[\#26E8B0\] {
+  background-color: #0D9F72 !important;
+  color: #FFFFFF !important;
+}
+
+html.light-theme .bg-\[\#26E8B0\]:hover,
+html.light-theme .hover\:bg-\[\#26E8B0\]:hover,
+html.light-theme .hover\:bg-\[\#4FF2C3\]:hover {
+  background-color: #09845E !important;
+  color: #FFFFFF !important;
+}
+
+html.light-theme .bg-\[\#A3E6B8\] {
+  background-color: #0D9F72 !important;
+  color: #FFFFFF !important;
+}
+
+html.light-theme .text-\[\#080D0B\],
+html.light-theme .text-\[\#0E1914\],
+html.light-theme .text-\[\#07120E\] {
+  color: #FFFFFF !important;
+}
+
+/* Semantic Status Text Adjustments for Light Backgrounds */
+html.light-theme .text-\[\#4ADE80\] {
+  color: #15803D !important;
+}
+
+html.light-theme .text-\[\#FBBF24\] {
+  color: #B45309 !important;
+}
+
+html.light-theme .text-\[\#F87171\] {
+  color: #DC2626 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1914;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B4337;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A3E6B8;
+}
+
+html.light-theme ::-webkit-scrollbar-track {
+  background: #EAF2ED;
+}
+html.light-theme ::-webkit-scrollbar-thumb {
+  background: #B5CBBF;
+  border-radius: 3px;
+}
+html.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #0D9F72;
+}
+
+/* ============================================================================
+   LEAFLET GIS MAP THEME OVERRIDES (DARK & LIGHT MODES)
+   ============================================================================ */
+.leaflet-container {
+  background: #0E1914 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+html.light-theme .leaflet-container {
+  background: #E6EFE9 !important;
+}
+
+.nwis-map-tiles-clean .leaflet-tile-pane,
+.nwis-map-tiles-simplified .leaflet-tile-pane {
+  filter: invert(92%) hue-rotate(135deg) saturate(65%) brightness(88%) contrast(98%);
+}
+
+html.light-theme .nwis-map-tiles-clean .leaflet-tile-pane,
+html.light-theme .nwis-map-tiles-simplified .leaflet-tile-pane {
+  filter: saturate(88%) brightness(101%) contrast(102%);
+}
+
+.nwis-map-tiles-terrain .leaflet-tile-pane,
+.nwis-map-tiles-topographic .leaflet-tile-pane {
+  filter: invert(86%) hue-rotate(115deg) saturate(85%) brightness(86%) contrast(108%);
+}
+
+html.light-theme .nwis-map-tiles-terrain .leaflet-tile-pane,
+html.light-theme .nwis-map-tiles-topographic .leaflet-tile-pane {
+  filter: saturate(102%) brightness(99%) contrast(104%);
+}
+
+.nwis-map-tiles-satellite .leaflet-tile-pane {
+  filter: saturate(108%) brightness(92%) contrast(106%);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #12221B !important;
+  color: #F2F6F0 !important;
+  border: 1px solid #3B5949 !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55) !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+}
+
+html.light-theme .leaflet-popup-content-wrapper,
+html.light-theme .leaflet-popup-tip {
+  background: #FFFFFF !important;
+  color: #0F231B !important;
+  border: 1px solid #CFE0D6 !important;
+  box-shadow: 0 12px 28px rgba(15, 35, 27, 0.16) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  min-width: 270px;
+}
+
+.leaflet-control-attribution {
+  background: rgba(14, 25, 20, 0.9) !important;
+  color: #9BB0A3 !important;
+  font-size: 10px !important;
+  border-top: 1px solid #2B4337;
+}
+
+html.light-theme .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #4A6658 !important;
+  border-top: 1px solid #CFE0D6;
+}
+
+.leaflet-control-attribution a {
+  color: #A3E6B8 !important;
+  font-weight: 600;
+}
+
+html.light-theme .leaflet-control-attribution a {
+  color: #097956 !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #25271F !important;
+  }
+}
